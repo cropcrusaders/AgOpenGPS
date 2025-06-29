@@ -54,6 +54,13 @@ In order to contribute to AgOpenGPS, follow these steps:
 - [PCB and Firmware Repository](https://github.com/agopengps-official/Boards)
 - [SK21 Rate Control Repository](https://github.com/agopengps-official/Rate_Control)
 
+## MQTT Section Control
+
+AgOpenGPS includes a lightweight MQTT client implementing the **MQTT Section Control Rule**. The client subscribes to
+`agopen/sectioncontrol/commands` and `agopen/system/commands` to receive section commands and shutdown requests.
+Status and acknowledgements are published every 30 seconds on `agopen/sectioncontrol/status` using JSON payloads.
+Refer to `MqttSectionControlClient` for integration details and examples.
+
 ## License
 
 If you distribute copies of such a program, whether
